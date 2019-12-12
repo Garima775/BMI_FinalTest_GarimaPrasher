@@ -28,7 +28,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         return dictionary.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,8 +41,18 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         if let y = cell.viewWithTag(2) as? UILabel{
-            y.text = indexDict["notes"] as? String
+            y.text = indexDict["age"] as? String
         }
+        if let z = cell.viewWithTag(3) as? UILabel{
+            z.text = indexDict["gender"] as? String
+        }
+        if let a = cell.viewWithTag(4) as? UILabel{
+            a.text = indexDict["height"] as? String
+        }
+        if let b = cell.viewWithTag(5) as? UILabel{
+            b.text = indexDict["weight"] as? String
+        }
+        
     
         return cell
     }
@@ -59,9 +69,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             
         }
     }
-    
-    
-    
     func retrieveData(){
         
         db = Firestore.firestore()
@@ -77,7 +84,4 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         })
         
     }
-    
-
-    
 }

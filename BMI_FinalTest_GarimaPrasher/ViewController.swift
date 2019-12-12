@@ -33,6 +33,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func Heightswitch(_ sender: UISwitch) {
+        
+    }
+    
+    
+    @IBAction func Weightswitch(_ sender: UISwitch) {
+        
+    }
+    
+    
+    
+    
     @IBAction func Submit(_ sender: UIButton) {
          db = Firestore.firestore()
                let docId = db?.collection("data").document().documentID
