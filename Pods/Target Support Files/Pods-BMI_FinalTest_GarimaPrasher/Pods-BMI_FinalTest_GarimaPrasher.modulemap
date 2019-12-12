@@ -1,0 +1,6 @@
+framework module Pods_BMI_FinalTest_GarimaPrasher {
+  umbrella header "Pods-BMI_FinalTest_GarimaPrasher-umbrella.h"
+
+  export *
+  module * { export * }
+}

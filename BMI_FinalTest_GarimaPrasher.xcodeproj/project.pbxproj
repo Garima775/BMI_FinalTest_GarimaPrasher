@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D861DA1E7D1998B792D5288 /* Pods_BMI_FinalTest_GarimaPrasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAB073FFF49266A2031F447 /* Pods_BMI_FinalTest_GarimaPrasher.framework */; };
 		80B99C2823A1B3CE00D60445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99C2723A1B3CE00D60445 /* AppDelegate.swift */; };
 		80B99C2A23A1B3CE00D60445 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99C2923A1B3CE00D60445 /* SceneDelegate.swift */; };
 		80B99C2C23A1B3CE00D60445 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99C2B23A1B3CE00D60445 /* ViewController.swift */; };
 		80B99C2F23A1B3CE00D60445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C2D23A1B3CE00D60445 /* Main.storyboard */; };
 		80B99C3123A1B3CF00D60445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C3023A1B3CF00D60445 /* Assets.xcassets */; };
 		80B99C3423A1B3CF00D60445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C3223A1B3CF00D60445 /* LaunchScreen.storyboard */; };
+		80B99C4023A1BBAC00D60445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C3F23A1BBAC00D60445 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DAB073FFF49266A2031F447 /* Pods_BMI_FinalTest_GarimaPrasher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMI_FinalTest_GarimaPrasher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B99C2423A1B3CE00D60445 /* BMI_FinalTest_GarimaPrasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_FinalTest_GarimaPrasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B99C2723A1B3CE00D60445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B99C2923A1B3CE00D60445 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		80B99C3023A1B3CF00D60445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B99C3323A1B3CF00D60445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80B99C3523A1B3CF00D60445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B99C3F23A1BBAC00D60445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DC4B1C0E48C891C9790D588 /* Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig"; path = "Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig"; sourceTree = "<group>"; };
+		A8A050720DCDC01FCBFAF2B9 /* Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig"; path = "Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D861DA1E7D1998B792D5288 /* Pods_BMI_FinalTest_GarimaPrasher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				80B99C2623A1B3CE00D60445 /* BMI_FinalTest_GarimaPrasher */,
 				80B99C2523A1B3CE00D60445 /* Products */,
+				A925B3DA096054755210E103 /* Pods */,
+				947144F7E79A7136073525A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +70,28 @@
 				80B99C2B23A1B3CE00D60445 /* ViewController.swift */,
 				80B99C2D23A1B3CE00D60445 /* Main.storyboard */,
 				80B99C3023A1B3CF00D60445 /* Assets.xcassets */,
+				80B99C3F23A1BBAC00D60445 /* GoogleService-Info.plist */,
 				80B99C3223A1B3CF00D60445 /* LaunchScreen.storyboard */,
 				80B99C3523A1B3CF00D60445 /* Info.plist */,
 			);
 			path = BMI_FinalTest_GarimaPrasher;
+			sourceTree = "<group>";
+		};
+		947144F7E79A7136073525A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB073FFF49266A2031F447 /* Pods_BMI_FinalTest_GarimaPrasher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A925B3DA096054755210E103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8A050720DCDC01FCBFAF2B9 /* Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig */,
+				8DC4B1C0E48C891C9790D588 /* Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80B99C3823A1B3CF00D60445 /* Build configuration list for PBXNativeTarget "BMI_FinalTest_GarimaPrasher" */;
 			buildPhases = (
+				D0C17D6D97D1B311C855893F /* [CP] Check Pods Manifest.lock */,
 				80B99C2023A1B3CE00D60445 /* Sources */,
 				80B99C2123A1B3CE00D60445 /* Frameworks */,
 				80B99C2223A1B3CE00D60445 /* Resources */,
+				5D1AA02819C1DC5FCCD51565 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B99C3423A1B3CF00D60445 /* LaunchScreen.storyboard in Resources */,
+				80B99C4023A1BBAC00D60445 /* GoogleService-Info.plist in Resources */,
 				80B99C3123A1B3CF00D60445 /* Assets.xcassets in Resources */,
 				80B99C2F23A1B3CE00D60445 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D1AA02819C1DC5FCCD51565 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C17D6D97D1B311C855893F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BMI_FinalTest_GarimaPrasher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80B99C2023A1B3CE00D60445 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		80B99C3923A1B3CF00D60445 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8A050720DCDC01FCBFAF2B9 /* Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		80B99C3A23A1B3CF00D60445 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DC4B1C0E48C891C9790D588 /* Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
