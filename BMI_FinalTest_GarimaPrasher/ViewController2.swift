@@ -14,6 +14,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
        var dictionary = [[String:AnyObject]]()
        var indexDict = [String:AnyObject]()
      var dict = [String:AnyObject]()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
