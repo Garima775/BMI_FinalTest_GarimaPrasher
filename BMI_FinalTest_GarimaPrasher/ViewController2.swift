@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController2: UIViewController {
+class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var listTable: UITableView!
     var db:Firestore?
@@ -24,6 +24,44 @@ class ViewController2: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dictionary.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        
+        indexDict = dictionary[indexPath.row]
+        
+        if let x = cell.viewWithTag(1) as? UILabel{
+            x.text = indexDict["name"] as? String
+        }
+        
+        if let y = cell.viewWithTag(2) as? UILabel{
+            y.text = indexDict["notes"] as? String
+        }
+    
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexDict = dictionary[indexPath.row]
+        self.performSegue(withIdentifier: "data", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "data"{
+            let vc = segue.destination as?  ViewController2
+            vc!.dictionary = [indexDict]
+            
+        }
+    }
+    
+    
+    
     func retrieveData(){
         
         db = Firestore.firestore()
