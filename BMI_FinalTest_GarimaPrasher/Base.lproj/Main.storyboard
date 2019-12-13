@@ -195,9 +195,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-bF-Gik">
-                                <rect key="frame" x="180" y="724" width="55" height="30"/>
+                                <rect key="frame" x="171" y="722" width="78" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DELETE"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="DELETE">
+                                    <color key="titleColor" red="0.66765149109999999" green="0.21003634539999999" blue="0.160703187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="Delete:" destination="x1T-7j-TJW" eventType="touchUpInside" id="MEy-Ww-7Az"/>
                                 </connections>
@@ -206,7 +209,9 @@
                                 <rect key="frame" x="340" y="18" width="43" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="ADD"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.66765149109999999" green="0.21003634539999999" blue="0.160703187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="MzY-Ee-3gX" kind="show" id="2ks-Im-OBO"/>
                                 </connections>
@@ -224,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="P5z-LP-21g">
             <objects>
-                <viewController id="MzY-Ee-3gX" sceneMemberID="viewController">
+                <viewController id="MzY-Ee-3gX" customClass="ViewController3" customModule="BMI_FinalTest_GarimaPrasher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VqV-5A-DmW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,7 +267,12 @@
                                 <rect key="frame" x="143" y="384" width="111" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="UPDATE"/>
+                                <state key="normal" title="UPDATE">
+                                    <color key="titleColor" red="0.66765149109999999" green="0.21003634539999999" blue="0.160703187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="Update:" destination="MzY-Ee-3gX" eventType="touchUpInside" id="ObE-Gi-ecl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UPDATE BMI CALCULATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-0K-wTR">
                                 <rect key="frame" x="18" y="48" width="361" height="35"/>
@@ -276,6 +286,10 @@
                         <viewLayoutGuide key="safeArea" id="WDL-wg-htk"/>
                     </view>
                     <navigationItem key="navigationItem" id="YP2-wN-EuS"/>
+                    <connections>
+                        <outlet property="bmiupdate" destination="8Ka-Dw-F8D" id="17O-iA-DaH"/>
+                        <outlet property="weightupdate" destination="EDT-Y3-2U8" id="7H9-Ns-rGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGV-oX-3Kt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
