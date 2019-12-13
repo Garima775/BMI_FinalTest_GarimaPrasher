@@ -67,16 +67,16 @@ class ViewController: UIViewController
                    }
                    let BMI: Double = weight / (height * height)
                    let shortBMI = String(format: "%.2f", BMI)
-                   var resultText = "Your BMI is \(shortBMI): "
+                   var resultText = "BMI is \(shortBMI): "
                    var descriptor : String?
-                   if(BMI < 16.0) { descriptor = "Severely Thin" }
-                   else if(BMI < 16.99) { descriptor = "Moderately Thin" }
-                   else if(BMI < 18.49) { descriptor = "Slightly Thin" }
+                   if(BMI < 16.0) { descriptor = "Severe Thinness" }
+                   else if(BMI < 16.99) { descriptor = "Moderate Thin" }
+                   else if(BMI < 18.49) { descriptor = "Mild Thin" }
                    else if(BMI < 24.99) { descriptor = "Normal" }
                    else if(BMI < 29.99) { descriptor = "Overweight" }
-                   else if(BMI < 34.99) { descriptor = "Moderately Obese" }
-                   else if(BMI < 39.99) { descriptor = "Severely Obese" }
-                   else { descriptor = "Very Severely Obese" }
+                   else if(BMI < 34.99) { descriptor = "Obese 1" }
+                   else if(BMI < 39.99) { descriptor = "Obese 2" }
+                   else { descriptor = "Obese 3 " }
             resultText += descriptor!
             print(resultText)
             resultlabel.text = resultText

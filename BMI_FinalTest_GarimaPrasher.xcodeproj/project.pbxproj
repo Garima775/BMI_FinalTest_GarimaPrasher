@@ -16,6 +16,7 @@
 		80B99C3423A1B3CF00D60445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C3223A1B3CF00D60445 /* LaunchScreen.storyboard */; };
 		80B99C4223A1BC5700D60445 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99C4123A1BC5700D60445 /* ViewController2.swift */; };
 		80B99C4623A1C90F00D60445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B99C4523A1C90F00D60445 /* GoogleService-Info.plist */; };
+		80B99C4823A4291800D60445 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B99C4723A4291800D60445 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		80B99C3523A1B3CF00D60445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B99C4123A1BC5700D60445 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		80B99C4523A1C90F00D60445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80B99C4723A4291800D60445 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		8DC4B1C0E48C891C9790D588 /* Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig"; path = "Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher.release.xcconfig"; sourceTree = "<group>"; };
 		A8A050720DCDC01FCBFAF2B9 /* Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig"; path = "Target Support Files/Pods-BMI_FinalTest_GarimaPrasher/Pods-BMI_FinalTest_GarimaPrasher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 				80B99C3223A1B3CF00D60445 /* LaunchScreen.storyboard */,
 				80B99C3523A1B3CF00D60445 /* Info.plist */,
 				80B99C4123A1BC5700D60445 /* ViewController2.swift */,
+				80B99C4723A4291800D60445 /* ViewController3.swift */,
 			);
 			path = BMI_FinalTest_GarimaPrasher;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B99C4823A4291800D60445 /* ViewController3.swift in Sources */,
 				80B99C2C23A1B3CE00D60445 /* ViewController.swift in Sources */,
 				80B99C4223A1BC5700D60445 /* ViewController2.swift in Sources */,
 				80B99C2823A1B3CE00D60445 /* AppDelegate.swift in Sources */,
