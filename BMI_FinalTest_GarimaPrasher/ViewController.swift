@@ -67,7 +67,7 @@ class ViewController: UIViewController
                    }
                    let BMI: Double = weight / (height * height)
                    let shortBMI = String(format: "%.2f", BMI)
-                   var resultText = "BMI is \(shortBMI): "
+                   var resultText = "BMI- \(shortBMI): "
                    var descriptor : String?
                    if(BMI < 16.0) { descriptor = "Severe Thinness" }
                    else if(BMI < 16.99) { descriptor = "Moderate Thin" }
