@@ -26,9 +26,10 @@ class ViewController: UIViewController
     @IBOutlet weak var Weighttextfield: UITextField!
     var dict = [String:AnyObject]()
     var db:Firestore?
-    var height:Int = 0
-    var weight:Int = 0
-    var bmi:Int = 0
+    var height:Double = 0
+    var weight:Double = 0
+    var bmi:Double
+        = 0
     var lastCalculationType: Int?
     
     override func viewDidLoad() {
@@ -39,36 +40,28 @@ class ViewController: UIViewController
     
     
     @IBAction func Heightswitch(_ sender: UISwitch) {
-        weight = Int(self.Weighttextfield.text!)!
-        height = Int(self.Heighttextfield.text!)!
-        print("weight height is",weight,height)
         
-        height = height * 39
         
-        bmi = weight*703/height*height
-        print("bmi is",bmi)
        
     }
-    
-    
-  
-    
-    
-    
     @IBAction func Submit(_ sender: UIButton) {
          db = Firestore.firestore()
                let docId = db?.collection("data").document().documentID
         if Weighttextfield.text != nil && Heighttextfield.text != nil, var weight = Double(Weighttextfield.text!), var height = Double(Heighttextfield.text!) {
                    self.view.endEditing(true)
                    //Calculating BMI using metric, so convert to metric first
-            if (HeightSwitch.isOn == true) {
-                       (weight) *= 0.453592;
-                       (height) *= 0.0254;
-                   }
+//            if (HeightSwitch.isOn == true) {
+//                       (weight) *= 0.453592;
+//                       (height) *= 0.0254;
+//                   }
+//            
+            
+            
                    let BMI: Double = weight / (height * height)
                    let shortBMI = String(format: "%.2f", BMI)
-                   var resultText = "BMI- \(shortBMI): "
+                   var resultText = "BMI-> \(shortBMI): "
                    var descriptor : String?
+            
                    if(BMI < 16.0) { descriptor = "Severe Thinness" }
                    else if(BMI < 16.99) { descriptor = "Moderate Thin" }
                    else if(BMI < 18.49) { descriptor = "Mild Thin" }

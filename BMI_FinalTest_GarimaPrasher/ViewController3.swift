@@ -26,6 +26,7 @@ class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         print("dict",dict)
     }
     
     @IBAction func Update(_ sender: UIButton) {

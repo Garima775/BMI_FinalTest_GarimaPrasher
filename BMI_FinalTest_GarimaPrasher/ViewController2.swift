@@ -77,33 +77,53 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
             for i in snap!.documents{
                 self.dictionary.append(i.data() as [String : AnyObject])
-                
+                self.listTable.reloadData()
             }
             print("dict is",self.dictionary)
             
-            self.listTable.reloadData()
+            
         })
         
     }
     
     @IBAction func Delete(_ sender: UIButton) {
-        db = Firestore.firestore()
-        db?.collection("data").document((dict["docId"] as? String)!).delete(){
-            err in
-            if let error = err{
-                print(error.localizedDescription)
-                
-            }else{
-                print("document deleted successfully")
-                
-                let alert = UIAlertController(title: "Message", message: "Successfully Deleted", preferredStyle: .alert)
-                let okay = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    self.navigationController?.popViewController(animated: true)
-                })
-                alert.addAction(okay)
-                self.present(alert, animated: true, completion: nil)
-            }
+        
+        
+        for i in dictionary{
+            print("docid is",i["docId"] as? String)
+            
+            deleteData(docId: (i["docId"] as? String)!)
         }
+        
+    
+        
+    }
+    
+    
+    
+    func deleteData(docId:String){
+        
+        db = Firestore.firestore()
+               db?.collection("data").document(docId).delete(){
+                   err in
+                   if let error = err{
+                       print(error.localizedDescription)
+                       
+                   }else{
+                       print("document deleted successfully")
+                       
+                       let alert = UIAlertController(title: "Message", message: "Successfully Deleted", preferredStyle: .alert)
+                       let okay = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                            self.dismiss(animated: true, completion: nil)
+                       })
+                       alert.addAction(okay)
+                       self.present(alert, animated: true, completion: nil)
+                    
+                     
+                   }
+              
+               }
+        
         
     }
 }
