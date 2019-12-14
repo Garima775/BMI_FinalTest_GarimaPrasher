@@ -50,7 +50,7 @@ class ViewController: UIViewController
         if Weighttextfield.text != nil && Heighttextfield.text != nil, var weight = Double(Weighttextfield.text!), var height = Double(Heighttextfield.text!) {
                    self.view.endEditing(true)
                    //Calculating BMI using metric, so convert to metric first
-//            if (HeightSwitch.isOn == true) {
+//           if (HeightSwitch.isOn == true) {
 //                       (weight) *= 0.453592;
 //                       (height) *= 0.0254;
 //                   }
@@ -69,7 +69,7 @@ class ViewController: UIViewController
                    else if(BMI < 29.99) { descriptor = "Overweight" }
                    else if(BMI < 34.99) { descriptor = "Obese 1" }
                    else if(BMI < 39.99) { descriptor = "Obese 2" }
-                   else { descriptor = "Obese 3 " }
+                   else { descriptor = "Obese 3" }
             resultText += descriptor!
             print(resultText)
             resultlabel.text = resultText
@@ -81,7 +81,7 @@ class ViewController: UIViewController
                }
                else {
             
-                resultlabel.text = "Please fill out your height and weight."
+                resultlabel.text = "Enter your height and weight."
                 resultlabel.isHidden = false
                 lastCalculationType = 0
             }

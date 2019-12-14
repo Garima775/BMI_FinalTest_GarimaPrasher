@@ -23,6 +23,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
 
         // Do any additional setup after loading the view.
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dictionary.count
     }
@@ -94,13 +95,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
             
             deleteData(docId: (i["docId"] as? String)!)
         }
-        
-    
-        
     }
-    
-    
-    
+
     func deleteData(docId:String){
         
         db = Firestore.firestore()
@@ -124,6 +120,12 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
               
                }
         
+        
+    }
+    
+    
+    @IBAction func EditButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "edit", sender: nil)
         
     }
 }
