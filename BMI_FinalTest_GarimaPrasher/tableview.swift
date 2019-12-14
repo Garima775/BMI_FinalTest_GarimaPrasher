@@ -12,17 +12,14 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var listTable: UITableView!  //connected with the table view
     var db:Firestore?
     var arr = ["sdada","dasdasd"]
-       var dictionary = [[String:AnyObject]]() //intialised the variable dictionary in which data will be stored and retrieved in the next screen with that particular id.
-       var indexDict = [String:AnyObject]()
+    var dictionary = [[String:AnyObject]]() //intialised the variable dictionary in which data will be stored and retrieved in the next screen with that particular id.
+    var indexDict = [String:AnyObject]()
      var dict = [String:AnyObject]() // intilaised the variable dict
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
          retrieveData()
-        
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -35,11 +32,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
         indexDict = dictionary[indexPath.row]
-        
         //intialised the each fields where data will be retrieved with particular tags
-        
         if let x = cell.viewWithTag(1) as? UILabel
         {
             x.text = indexDict["name"] as? String //name will be stored in variable x with tag value 1
@@ -73,7 +67,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         indexDict = dictionary[indexPath.row]
         self.performSegue(withIdentifier: "edit", sender: nil)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "edit"{
             let vc = segue.destination as?  ViewController3
@@ -93,8 +86,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.listTable.reloadData()
             }
             print("dict is",self.dictionary)
-            
-            
         })
         
     }
@@ -103,12 +94,11 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         //for loop initialised to delete all the entries from the database when delete button is pressed.
         for i in dictionary{
-            print("docid is",i["docId"] as? String)
+            print("docid is",i ["docId"] as? String)
             
             deleteData(docId: (i["docId"] as? String)!)
         }
     }
-
     func deleteData(docId:String){
         
         db = Firestore.firestore()
@@ -126,16 +116,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                        })
                        alert.addAction(okay)
                        self.present(alert, animated: true, completion: nil)
-                    
-                     
                    }
-              
                }
-        
-        
     }
-    
-    
     @IBAction func EditButton(_ sender: UIButton) {
         performSegue(withIdentifier: "edit", sender: nil)
         
