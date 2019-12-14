@@ -5,30 +5,30 @@
 //File Description: this is the main view controller screeen wor Personal Information screen where uer will add the data in the fields as name, height, weight, age and gender and will caclculate the bmi and also gets to know the value of bmi where he/she stands from very thinness to obesity.
 
 import UIKit
-import Firebase
+import Firebase //imported the firebase
 
 
 class ViewController: UIViewController
 {
 
-    @IBOutlet weak var resultlabel: UITextField!
-    @IBOutlet weak var Nametextfield: UITextField!
+    @IBOutlet weak var resultlabel: UITextField! //text fieldwhere bmi result will be shown
+    @IBOutlet weak var Nametextfield: UITextField! //text field for the name
     
-    @IBOutlet weak var HeightSwitch: UISwitch!
+    @IBOutlet weak var HeightSwitch: UISwitch! //text field for the height
     
-    @IBOutlet weak var Agetextfield: UITextField!
+    @IBOutlet weak var Agetextfield: UITextField! //textfield for the age
     
-    @IBOutlet weak var Gendertextfield: UITextField!
-    
-    
-    @IBOutlet weak var Heighttextfield: UITextField!
+    @IBOutlet weak var Gendertextfield: UITextField! //text field for the gender
     
     
-    @IBOutlet weak var Weighttextfield: UITextField!
-    var dict = [String:AnyObject]()
+    @IBOutlet weak var Heighttextfield: UITextField! //text field for the height
+    
+    
+    @IBOutlet weak var Weighttextfield: UITextField! //text field for the weight
+    var dict = [String:AnyObject]() //data will be stored in this field
     var db:Firestore?
-    var height:Double = 0
-    var weight:Double = 0
+    var height:Double = 0 //initialised the height variable
+    var weight:Double = 0  //initialised the weight variable
     var bmi:Double = 0
     var lastCalculationType: Int?
     
@@ -39,11 +39,12 @@ class ViewController: UIViewController
     }
     
     
-    @IBAction func Heightswitch(_ sender: UISwitch) {
+    @IBAction func Heightswitch(_ sender: UISwitch) //connected the switch button operation
+    {
         
-        
-       
     }
+    
+    //submit button or done button, when user clicks the done button, data will be added to the firebase with the unique id
     @IBAction func Submit(_ sender: UIButton) {
          db = Firestore.firestore()
                let docId = db?.collection("data").document().documentID
@@ -56,7 +57,7 @@ class ViewController: UIViewController
 //                   }
 //            
             
-            
+            //formula to calculate the bmi of the person and also descrivbing the value in which category that person is belonging to.
                    let BMI: Double = weight / (height * height)
                    let shortBMI = String(format: "%.2f", BMI)
                    var resultText = "BMI-> \(shortBMI): "
@@ -87,7 +88,7 @@ class ViewController: UIViewController
             }
                   
     
-    
+    // parameteres are initialised from which data will be retrieved in the next view controller2 screen
         let parameters = ["name":Nametextfield.text!,"age":Agetextfield.text!,"gender":Gendertextfield.text!, "height":Heighttextfield.text!, "weight": Weighttextfield.text!, "bmi": resultlabel.text!, "docId":docId!] as [String : Any]
 
     db?.collection("data").document(docId!).setData(parameters as [String: Any]){
