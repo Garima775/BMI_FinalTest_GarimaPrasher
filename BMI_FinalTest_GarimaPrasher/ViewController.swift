@@ -2,6 +2,7 @@
 //Author Name: Garima Prasher
 //student id: 301093329
 //DATE : 11 Dec 2019
+//File Description: this is the main view controller screeen wor Personal Information screen where uer will add the data in the fields as name, height, weight, age and gender and will caclculate the bmi and also gets to know the value of bmi where he/she stands from very thinness to obesity.
 
 import UIKit
 import Firebase

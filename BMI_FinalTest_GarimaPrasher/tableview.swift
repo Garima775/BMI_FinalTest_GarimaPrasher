@@ -2,6 +2,7 @@
 //Author Name: Garima Prasher
 //student id: 301093329
 //DATE : 11 Dec 2019
+//File description: this is the second view controller or table view controller. Data will be fetched from the first profile screen and in this screen, name, height, bmi and weight of the person will be shown. Edit button will help the user to enter into the last screen that is Update screen
 
 import UIKit
 import Firebase
