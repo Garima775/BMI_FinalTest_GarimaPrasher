@@ -76,18 +76,12 @@ class ViewController: UIViewController
             resultlabel.text = resultText
             resultlabel.isHidden = false
             lastCalculationType = 0
-                  
-                   
-                  
                }
                else {
-            
                 resultlabel.text = "Enter your height and weight."
                 resultlabel.isHidden = false
                 lastCalculationType = 0
             }
-                  
-    
     // parameteres are initialised from which data will be retrieved in the next view controller2 screen
         let parameters = ["name":Nametextfield.text!,"age":Agetextfield.text!,"gender":Gendertextfield.text!, "height":Heighttextfield.text!, "weight": Weighttextfield.text!, "bmi": resultlabel.text!, "docId":docId!] as [String : Any]
 
@@ -106,18 +100,6 @@ class ViewController: UIViewController
                        alert.addAction(okay)
                        self.present(alert, animated: true, completion: nil)
                    }
-            
-            
-            }
-
-            }
-                
-            
-   
-
-    
-
-
-
-
+        }
+    }
 }
