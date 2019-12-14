@@ -18,28 +18,31 @@ class ViewController3: UIViewController {
     
     @IBOutlet weak var weightupdate: UITextField!
     
-    @IBOutlet weak var heightupdate: UITextField!
+    
     @IBOutlet weak var bmiupdate: UITextField!
     var lastCalculationType: Int?
     var height:Double = 0
-       var weight:Double = 0
-    
+    var weight:Double = 0
+    var BMI:Double = 0
+    var dictionary = [String:AnyObject]()
+    var indexDict = [String:AnyObject]()
     var dict = [String:AnyObject]()
     
     var db:Firestore?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         print("dict",dict)
+         print("dict",dictionary)
     }
     
     @IBAction func calculatenewbmi(_ sender: UIButton) {
-        if weightupdate.text != nil && heightupdate.text != nil, var weight = Double(weightupdate.text!), var height = Double(heightupdate.text!) {
+        if weightupdate.text != nil, let weight = Double(weightupdate.text!)
+        {
                           self.view.endEditing(true)
         
         let BMI: Double = weight / (height * height)
                           let shortBMI = String(format: "%.2f", BMI)
-                          var resultText = "BMI-> \(shortBMI): "
+                          var resultText = "BMI is \(shortBMI): "
                           var descriptor : String?
                    
                           if(BMI < 16.0) { descriptor = "Severe Thinness" }
@@ -55,9 +58,6 @@ class ViewController3: UIViewController {
                    bmiupdate.text = resultText
                   bmiupdate.isHidden = false
                    lastCalculationType = 0
-                         
-                          
-                         
                       }
     }
     
@@ -66,19 +66,20 @@ class ViewController3: UIViewController {
         db = Firestore.firestore()
             
 
-        let parameters = ["Weight":weightupdate.text!,"BMI":bmiupdate.text!,"Height":heightupdate.text!, "docId":dict["docId"]!] as [String : Any]
+        let parameters = ["Weight":weightupdate.text!,"BMI":bmiupdate.text!, "docId":dictionary["docId"]!] as [String : Any]
 
-             db?.collection("data").document((dict["docId"] as? String)!).updateData(parameters as [String : Any]){
+             db?.collection("data").document((dictionary["docId"] as? String)!).updateData(parameters as [String : Any]){
                  err in
                  if let error = err{
                      print(error.localizedDescription)
                      
                  }else{
-                     print("document added successfully")
+                     print("weight updated successfully")
                      
                      let alert = UIAlertController(title: "Message", message: "Successfully Updated", preferredStyle: .alert)
                      let okay = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                         self.navigationController?.popViewController(animated: true)
+                      //   self.navigationController?.popViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
                      })
                      alert.addAction(okay)
                      self.present(alert, animated: true, completion: nil)

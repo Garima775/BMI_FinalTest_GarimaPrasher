@@ -24,6 +24,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Do any additional setup after loading the view.
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dictionary.count
     }
@@ -61,13 +62,13 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexDict = dictionary[indexPath.row]
-        self.performSegue(withIdentifier: "data", sender: nil)
+        self.performSegue(withIdentifier: "edit", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "data"{
-            let vc = segue.destination as?  ViewController2
-            vc!.dictionary = [indexDict]
+        if segue.identifier == "edit"{
+            let vc = segue.destination as?  ViewController3
+            vc!.dictionary = indexDict
             
         }
     }

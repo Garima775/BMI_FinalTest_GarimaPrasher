@@ -28,8 +28,7 @@ class ViewController: UIViewController
     var db:Firestore?
     var height:Double = 0
     var weight:Double = 0
-    var bmi:Double
-        = 0
+    var bmi:Double = 0
     var lastCalculationType: Int?
     
     override func viewDidLoad() {
